@@ -6,6 +6,7 @@
 </head>
 
 <body>
+	<!--
 	<h1>0</h1>
 	<h2>WILDCATS</h2>
 
@@ -28,6 +29,35 @@
 				wildcat--;
 			}
 			$('h1').text(wildcat);
+
+		});
+		
+	</script>
+	-->
+
+
+	<img src="http://www.fillmurray.com/500/400">
+
+	<div>
+		<button id="left"> Left </button>
+		<button id="right"> Right </button>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		var address = "http://www.fillmurray.com/500/";
+		var picIndex = 400;
+
+		$('button').click(function(){
+			if($(this).attr('id')==='right'){
+				picIndex++;
+				console.log('clicked');
+			}
+			else {
+				picIndex--;
+			}
+			$('img').attr("src", address + picIndex);
 
 		});
 		
