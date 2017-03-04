@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<title>JS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<h1>0</h1>
+	<h2>WILDCATS</h2>
+
+	<div>
+		<button id="decrease"> - </button>
+		<button id="increase"> + </button>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		var wildcat = 0;
+
+		$('button').click(function(){
+			if($(this).attr('id')==='increase'){
+				wildcat++;
+				console.log('clicked');
+			}
+			else {
+				wildcat--;
+			}
+			$('h1').text(wildcat);
+
+		});
+		
+	</script>
+
+</body>
+
+</html>
